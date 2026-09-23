@@ -4,7 +4,7 @@
 
 ### What is this?
 
-It's a Python web application that tries to solve daily life conundrums.
+It's a Python web application that tries to solve daily life  annoyances.
 
 We as humans waste too much time doing little annoying things manually, such as organizing tasks and their deadlines, calculating bills/splitting them with friends, planning our schedule, etc.
 
