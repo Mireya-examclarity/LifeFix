@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>LifeFix - focus more</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+    body{ background: #fef9e7; font-family: Comic Sans MS, cursive; padding: 15px; }
+
+   .box{ background: white; border: 2.5px solid black; border-radius: 14px; padding: 14px; margin: 12px 0; box-shadow: 4px 4px 0px black; }
+
+   .focus-box{ background: #ffcc5c; border-style: dashed; }
+
+    input,select{ padding: 7px; border: 2px solid black; border-radius: 8px; margin: 3px; font-family: inherit; }
+
+    button{ background: #82b1ff; border: 2px solid black; padding: 7px 13px; border-radius: 8px; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center;">LifeFix ✨</h1>
+
+<p style="text-align:center; font-size:13px; color: #666; margin-top:0;">What is annoying daily that software can make easier?</p>
+
+<!-- THIS IS THE DETAILED VISION PART -->
+{% if focus_task %}
+<div class="box focus-box">
+
+<h3 style="margin:0;">👉 Your focus right now:</h3>
+
+<h2 style="margin: 6px 0;">{{focus_task.name}}</h2>
+
+<p style="font-size:14px; margin:0;">{{focus_vision}}</p>
+
+<p style="font-size:12px; margin-top:8px;"><b>Plan:</b> {{focus_task.hours}}h needed | Deadline: {{focus_task.deadline}} | Score: {{score_func(focus_task)}}</p>
+</div>
+{% endif %}
+
+<div class="box">
+
+<h3 style="margin:0 0 8px 0;">+ add what is annoying you</h3>
+
+<form method="POST">
+
+<input name="name" placeholder="eg maths homework" required>
+
+<input type="date" name="deadline" required>
+
+<input type="number" step="0.5" name="hours" placeholder="hrs" required style="width:60px;">
+
+<select name="importance"><option>Low</option><option>Medium</option><option>High</option></select>
+
+<button>Add</button>
+
+</form>
+
+<a href="/clear" style="color:red; font-size:11px;">clear all</a>
+
+</div>
+
+<h3>All tasks - {{done}}/{{total}}</h3>
+
+{% for task in tasks %}
+
+<div class="box" style="background:{% if task.completed %}#eee{% elif task.importance=='High' %}#ffdde0{% else %}#eaf6ff{% endif %}; {% if task.completed %}opacity:0.6; text-decoration: line-through;{% endif %}">
+
+<b>{{task.name}}</b> - {{task.deadline}} - {{task.hours}}h
+
+<span style="float:right; background:black; color:white; padding:2px 6px; border-radius:6px; font-size:11px;">{{score_func(task)}}</span>
+
+<br><a href="/done/{{loop.index0}}"><button style="margin-top:6px; background:{% if task.completed %}#ccc{% else %}#a5d6a7{% endif %}">{% if task.completed %}undo{% else %}done{% endif %}</button></a>
+
+</div>
+
+{% endfor %}
+
+<p style="text-align:center; color:#bbb; font-size:11px; margin-top:30px;">made for daily life problems - not just a todo list</p>
+</body>
+</html>
