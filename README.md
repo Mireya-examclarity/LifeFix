@@ -1,28 +1,47 @@
- LifeFix - Fix Everyday Annoyances
+# LifeFix
 
-Live Demo: https://lifefix-qcdjfepxbrbsd6nqrdemip.streamlit.app/
 
-LifeFix is a Python-based web app that solves small but frustrating everyday problems. We often waste time doing simple tasks manually like organizing tables, calculating things, making a schedule, or figuring out what to do next.
 
-LifeFix asks: "What is something annoying in everyday life that software could make easier?" and gives you a suitable solution.
+### What is this?
 
-Features
-- 📊 Table Organizer - Clean and organize messy data
-- 🧮 Quick Calculators - For daily calculations
-- 📅 Smart Scheduler - Make your day more productive  
-- 💡 Daily Decision Helper - Figure out what to do next
-- 🎯 Simple and focused - No extra clutter
+It's a Python web application that tries to solve daily life conundrums.
 
-Unlike other software, LifeFix doesn't just tell you what could be done, it provides detailed vision to help you focus more.
+We as humans waste too much time doing little annoying things manually, such as organizing tasks and their deadlines, calculating bills/splitting them with friends, planning our schedule, etc.
 
- Tech Stack
+
+
+LifeFix aims at solving some of these small problems as a digital todo list with a twist.
+
+
+
+### The idea
+
+
+
+While most other sites give you information on what you could do, I want to give you what to do. The main question was: What small annoyances in everyday life could be improved by using software to solve them or help with it?
+
+
+
+### What it can do
+
+- Creating tasks with deadline, hours and priority
+
+- Priority calculation based on hours and deadline
+
+- Tells you what task to do next
+
+- Bill splitting with friends
+
+- Fast to set up, no login required
+
+
+
+### Built with
+
 - Python
-- Streamlit
-- Built with help of MetaAI and ChatGPT for debugging and learning
 
- How to run locally
+- Flask
 
-git clone https://github.com/Mireya-examclarity/LifeFix.git
-cd LifeFix
-pip install -r requirements.txt
-streamlit run app.py
+- HTML & CSS 
+ 
+ 
