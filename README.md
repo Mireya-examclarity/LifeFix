@@ -21,16 +21,17 @@ I wanted to make something useful while also making it fun to use. That's where 
 
 ### What it can do
 
-> It can create tasks with deadlines, estimated hours and according to priority.
-> It can calculate task priority based on deadlines, importance and hours.
-> It will suggest which task to do next.
-> The website split bills between friends.
-> It has space-themed design with an Outer Orbit look.
-> It is able organize tasks with a planet-inspired theme.
->It will display NASA's Astronomy Picture of the Day.
-> It can track the International Space Station.
-> The website provide fallback data if space APIs are unavailable.
-> It is simple to use with no login required.
+
+- It can create tasks with deadlines, estimated hours and according to priority.
+- It can calculate task priority based on deadlines, importance and hours.
+- It will suggest which task to do next.
+- The website split bills between friends.
+- It has space-themed design with an Outer Orbit look.
+-  It is able organize tasks with a planet-inspired theme.
+-  It will display NASA's Astronomy Picture of the Day.
+-   It can track the International Space Station.
+-    The website provide fallback data if space APIs are unavailable.
+-     It is simple to use with no login required.
 
 
 
